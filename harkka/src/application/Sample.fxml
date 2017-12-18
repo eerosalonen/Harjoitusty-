@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller">
+   <center>
+      <AnchorPane prefHeight="316.0" prefWidth="472.0" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane pickOnBounds="false" prefHeight="600.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                  <Tab text="rekisteröinti">
+                    <content>
+                      <AnchorPane maxHeight="600.0" maxWidth="906.0" minHeight="291.0" minWidth="476.0" prefHeight="575.0" prefWidth="906.0">
+                           <children>
+                              <ImageView fitHeight="752.0" fitWidth="1208.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/dogg.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="paatepistebutton" layoutX="217.0" layoutY="141.0" mnemonicParsing="false" onAction="#paatepistebutton" prefHeight="40.0" prefWidth="137.0" text="rekisteröi päätepisteet">
+                                 <effect>
+                                    <Shadow color="RED" />
+                                 </effect></Button>
+                              <CheckBox fx:id="sarkyvacheckbox" layoutX="24.0" layoutY="166.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="81.0" text="särkyvä" textFill="RED" />
+                              <CheckBox fx:id="kiireellinencheckbox" layoutX="25.0" layoutY="191.0" mnemonicParsing="false" text="kiireellinen" textFill="RED" />
+                              <TextField fx:id="lahtotextbox" layoutX="217.0" layoutY="35.0" />
+                              <TextField fx:id="paatetextbox" layoutX="217.0" layoutY="96.0" />
+                              <TextArea fx:id="textarea1" layoutX="414.0" layoutY="13.0" maxWidth="465.0" prefHeight="51.0" prefWidth="465.0" />
+                              <Button fx:id="varastoibutton" layoutX="23.0" layoutY="222.0" mnemonicParsing="false" onAction="#rekisteroipaketti" prefHeight="48.0" prefWidth="112.0" text="rekisteröi paketti">
+                                 <effect>
+                                    <Shadow color="RED" />
+                                 </effect></Button>
+                              <TextField fx:id="esinenimifield" layoutX="23.0" layoutY="128.0" />
+                              <TextField fx:id="painofield" layoutX="23.0" layoutY="35.0" />
+                              <TextField fx:id="kokofield" layoutX="23.0" layoutY="84.0" />
+                              <Label layoutX="34.0" layoutY="14.0" text="paino" textFill="RED" />
+                              <Label layoutX="36.0" layoutY="61.0" text="koko" textFill="RED" />
+                              <Label layoutX="215.0" layoutY="14.0" text="lähtökaupunki" textFill="RED" />
+                              <Label layoutX="217.0" layoutY="69.0" text="päämääräkaupunki" textFill="RED" />
+                              <Label layoutX="38.0" layoutY="113.0" text="nimi" textFill="RED" />
+                              <Label layoutX="34.0" layoutY="238.0" mouseTransparent="true" prefHeight="17.0" prefWidth="108.0" text="rekisteröi paketti" />
+                              <Label layoutX="221.0" layoutY="153.0" mouseTransparent="true" prefHeight="12.0" prefWidth="145.0" text="rekisteröi päätepisteet" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                <Tab fx:id="postitab" text="posti">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="752.0" fitWidth="1208.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/dogg.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ComboBox fx:id="pakettivalitsin" layoutX="16.0" layoutY="32.0" prefHeight="25.0" prefWidth="157.0" />
+                              <Label layoutX="191.0" layoutY="15.0" text="luokka valitsin" textFill="RED" />
+                              <Label layoutX="19.0" layoutY="15.0" text="paketti valitsin" textFill="RED" />
+                              <Button fx:id="lahetanappi" layoutX="20.0" layoutY="171.0" mnemonicParsing="false" onAction="#combotiedot" prefHeight="59.0" prefWidth="74.0" text="lähetä" textFill="RED">
+                                 <effect>
+                                    <Shadow color="RED" />
+                                 </effect></Button>
+                              <ComboBox fx:id="mista" layoutX="20.0" layoutY="87.0" prefHeight="25.0" prefWidth="113.0" promptText="mistä" />
+                              <ComboBox fx:id="mihin" layoutX="168.0" layoutY="87.0" prefHeight="25.0" prefWidth="110.0" promptText="mihin" />
+                              <Label layoutX="141.0" layoutY="91.0" text="=&gt;" textFill="RED" />
+                              <CheckBox fx:id="luokka1check" layoutX="184.0" layoutY="36.0" mnemonicParsing="false" onAction="#boxvalinta1" text="luokka 1" textFill="RED" />
+                              <CheckBox fx:id="luokka2check" layoutX="257.0" layoutY="36.0" mnemonicParsing="false" onAction="#boxvalinta2" text="luokka 2" textFill="RED" />
+                              <CheckBox fx:id="luokka3check" layoutX="330.0" layoutY="36.0" mnemonicParsing="false" onAction="#boxvalinta3" text="luokka 3" textFill="RED" />
+                              <Button fx:id="karttabutton" layoutX="123.0" layoutY="171.0" mnemonicParsing="false" onAction="#startkartta" prefHeight="59.0" prefWidth="87.0" text="kartta">
+                                 <effect>
+                                    <Shadow color="RED" />
+                                 </effect></Button>
+                              <TextArea id="textarea2" fx:id="textarea2" layoutX="403.0" layoutY="14.0" prefHeight="52.0" prefWidth="479.0" />
+                              <Label layoutX="149.0" layoutY="192.0" mouseTransparent="true" prefHeight="17.0" prefWidth="51.0" text="kartta" />
+                              <Label layoutX="39.0" layoutY="192.0" mouseTransparent="true" prefHeight="17.0" prefWidth="37.0" text="lähetä" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="info">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="752.0" fitWidth="1208.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/dogg.jpg" />
+                                 </image>
+                              </ImageView>
+                              <TextArea layoutX="23.0" layoutY="21.0" prefHeight="65.0" prefWidth="854.0" text="Tervetuloa harjoitustyöhöni. Aloita rekisteröinti tabista, jossa annat postitettavan esineesi tiedot.  Lähtö- ja päätepiste kaupunkeihin voi kirjoittaa&#10;kaupunkien nimiä. Tämän jälkeen voit lähettaa paketin posti tabista, jonka jälkeen voit seurata sen vaiheita kartalta.  Voit lähettää uuden paketin &#10;uudelleen käynnistämällä kartan, ja toistamalla vaiheet." />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

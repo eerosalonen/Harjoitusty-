@@ -1,0 +1,12 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+
+* {
+	-fx-border-radius: 1em !important;
+	-fx-font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+
+Button:hover {
+	-fx-opacity: 0.8;	
+}
